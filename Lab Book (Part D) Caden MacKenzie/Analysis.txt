@@ -1,0 +1,8 @@
+n-Queens and Monte Carlo Estimate
+Caden MacKenzie
+
+In order to understand the backtracking algorithm for the n-queens problem it is first important to understand how many nodes are in a tree with n queens. This is given by the equation ((n^n+1)-1)/(n-1). The number of nodes in a tree with 8 queens would take an incredibly long time to check. Therefore the backtracking method must be implemented in order to only check those nodes with a promising node before it. Still, using only promising nodes creates problems due to the fact that there are n! promising nodes. When considering solutions, there are n^2 children for every node in a state space tree and therefore (n^2)^n leaves, or in other words solutions.
+
+The Monte Carlo Estimate works by generating a random path as far down the tree as possible and storing that depth. By generating enough random paths and averaging them using the equation, an estimate is generated.
+
+In my results the MCE was close to the number of nodes visited in the n-queens problem, however it was not spot on. With more tests in the MCE the number would maybe be closer to the true value.
